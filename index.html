@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Demo Device Push</title>
+</head>
+
+<body>
+    <div id="header">
+      <div id="logoDevicePush"></div>
+      <h1><span class="blue">Device</span> <span class="grey">Push</span></h1>
+    </div>
+    <!-- content generic modal -->
+    <div id="animation" class="content containerTransition containerBottom">
+        <!-- close button modal -->
+        <img id ="closeButton" class="closeButton" src="img/close-button.png">
+        <!-- adserver modal type video -->
+        <div id="video" class="animation">
+          <video id = "videoSource" class="video" autoplay muted loop poster="img/narcos.jpg">
+            <source id="source" src="" type="video/mp4">
+          </video>
+        </div>
+        <!-- adserver modal type image -->
+        <div id="image" class="animation"></div>
+        <!-- adserver modal type gif -->
+        <div id="gif" class="animationGif"></div>
+        <!-- adserver modal type map -->
+        <div id="map" class="animationMap">
+            <iframe id="iframeMap" class="iframeMap" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA6J3NBkOTnRLPy4fw6FVvT1_-xkqD-mWg&q=Space+Needle,Seattle+WA"></iframe>
+            <a id="mapButton" class="mapButton" href="">Ver en Google Maps</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+</html>
